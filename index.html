@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Warrior | Responsive Website</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- boostrap cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  </head>
+
+  <body>
+    <!-- ......template start -->
+    <template id="postItemTemplate">
+      <li class="box" data-aos="fade-up" data-aos-delay="150">
+        <div class="image">
+          <!-- <img data-id="thumbnail" src="./images/des-1.jpg" alt="" /> -->
+          <img data-id="thumbnail" alt="" />
+          <div data-id="menu" class="menu">
+            <div data-id="edit" class="edit"><i class="fas fa-pen"></i></div>
+            <div data-id="remove" class="remove"><i class="fas fa-trash"></i></div>
+          </div>
+        </div>
+        <div class="content">
+          <h5 data-id="title">Card title</h5>
+          <p data-id="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, et.
+          </p>
+
+          <p class="info">
+            <small class="by">by</small>
+            <small data-id="author" class="author">Van Quy</small>
+            <small data-id="timeSpan" class="timeSpan"> - 3 mins go </small>
+          </p>
+          <a href="#">read more <i class="fas fa-angle-right"></i></a>
+        </div>
+      </li>
+    </template>
+    <!-- ......template end -->
+
+    <div class="wrapper">
+      <!-- header start -->
+      <header class="header" id="home">
+        <div id="menu-btn" class="toggle" onclick="menuToggle('.toggle','.header-menu');">
+          <i class="icon fas fa-bars"></i>
+        </div>
+
+        <div class="container">
+          <div class="header-top">
+            <div class="header-logo" data-aos="fade-up" data-aos-delay="150">
+              <a href="#">
+                <img src="./images/Frame.svg" alt="images" />
+                <span>Lavvar</span>
+              </a>
+            </div>
+
+            <div class="header-menu">
+              <a href="#home" data-aos="zoom-in-left" data-aos-delay="300">Home</a>
+              <a href="#about" data-aos="zoom-in-left" data-aos-delay="450">About</a>
+              <a href="#services" data-aos="zoom-in-left" data-aos-delay="600">Services</a>
+              <a href="#destination" data-aos="zoom-in-left" data-aos-delay="750">Destination</a>
+              <a href="#gallery" data-aos="zoom-in-left" data-aos-delay="900">Galllery</a>
+              <a href="#blogs" data-aos="zoom-in-left" data-aos-delay="1250">Blogs</a>
+            </div>
+
+            <div class="header-icon">
+              <button class="btn" data-aos="zoom-in-left" data-aos-delay="1400">
+                <a href="/add-edit-post.html"> Add new</a>
+              </button>
+              <button class="btn" data-aos="zoom-in-left" data-aos-delay="1750">sign up</button>
+            </div>
+          </div>
+        </div>
+        <div class="header-content">
+          <div class="header-text">
+            <p>Organize travel for everyone and everything you need</p>
+            <span data-aos="fade-up" data-aos-delay="150">Let's start</span>
+            <h3 data-aos="fade-up" data-aos-delay="300">World Tour With Us</h3>
+            <p class="description" data-aos="fade-up" data-aos-delay="450">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.olor sit amet consectetur
+              Molestiae, blanditiis.
+            </p>
+            <a href="#" class="btn" data-aos="fade-up" data-aos-delay="600">Book Now</a>
+            <a href="#" class="btn" data-aos="fade-up" data-aos-delay="600">Read More...</a>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="150"
+            class="header-image carousel slide"
+            id="carouselExampleIndicators"
+            data-bs-ride="true"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1664062444636-8bde2179b9dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=897&q=80"
+                  class="d-block w-100"
+                  alt="image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                  class="d-block w-100"
+                  alt="image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1629804470877-7961d7b48630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                  class="d-block w-100"
+                  alt="image"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <!-- booking section start -->
+      <section class="book-form" id="book-form">
+        <form action="#">
+          <div class="inputBox" data-aos="zoom-in" data-aos-delay="150">
+            <span>Are You Planning ?. </span>
+            <input type="text" placeholder="destination" />
+          </div>
+          <div class="inputBox" data-aos="zoom-in" data-aos-delay="300">
+            <span>When looking for ? </span>
+            <input type="date" />
+          </div>
+          <div class="inputBox" data-aos="zoom-in" data-aos-delay="450">
+            <span>Are You Planning ?. </span>
+            <input type="text" placeholder="no of travellers" />
+          </div>
+
+          <input
+            type="submit"
+            class="inputBox btn"
+            value="find now"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          />
+        </form>
+      </section>
+      <!-- booking section end -->
+
+      <!-- about section start -->
+      <section class="about" id="about">
+        <div class="left" data-aos="fade-right" data-aos-delay="150">
+          <div class="image">
+            <div class="circle"></div>
+            <img src="./images/BG (1).png" alt="" />
+            <div class="rectangle">
+              <span>999+</span>
+              <p>destination</p>
+            </div>
+          </div>
+        </div>
+        <div class="right" data-aos="fade-left" data-aos-delay="600">
+          <span>Whoe we are ?</span>
+          <h3>A smilling agent for you</h3>
+          <div class="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam adipisci architecto
+              non commodi, minima deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veniam adipisci architecto non commodi, minima deleniti.
+            </p>
+          </div>
+
+          <a href="#" class="btn">read more</a>
+        </div>
+      </section>
+      <!-- about section start -->
+
+      <!-- ................services start..................... -->
+
+      <section class="services" id="services">
+        <div class="heading">
+          <span>our services</span>
+          <h1>cost effective</h1>
+        </div>
+
+        <div class="box-container">
+          <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <i class="fas fa-globe"></i>
+            <h3>Worldwide</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
+            <div></div>
+          </div>
+          <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <i class="fas fa-hiking"></i>
+            <h3>adventure</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
+            <div class=""></div>
+          </div>
+          <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+            <i class="fas fa-utensils"></i>
+            <h3>food & drinks</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
+            <div class=""></div>
+          </div>
+          <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
+            <div class=""></div>
+          </div>
+          <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+            <i class="fas fa-wallet"></i>
+            <h3>affordable price</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
+            <div class=""></div>
+          </div>
+          <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 support</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
+            <div class=""></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ................services end..................... -->
+
+      <!-- ................destination start..................... -->
+
+      <section class="destination" id="destination">
+        <div class="heading">
+          <span>out destination</span>
+          <h1>keep looking up</h1>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroup-sizing-lg search">Search</span>
+          <input
+            id="searchInput"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-lg"
+          />
+        </div>
+
+        <ul class="box-container" id="box-container"></ul>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination" id="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>Previous
+              </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next"
+                >Next
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!-- ................destination end..................... -->
+
+      <!-- ................gallery start..................... -->
+
+      <section class="gallery" id="gallery">
+        <div class="heading">
+          <span>our gallery</span>
+          <h1>memories last forever</h1>
+        </div>
+
+        <div class="box-container">
+          <div class="box-column">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-1.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>green land</h3>
+            </div>
+
+            <div class="box box-half" data-aos="zoom-in-up" data-aos-delay="300">
+              <div class="image"><img src="./images/gallery-img-2.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>ice land</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+              <div class="image"><img src="./images/gallery-img-3.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>thi land</h3>
+            </div>
+          </div>
+
+          <div class="box-column">
+            <div class="box box-half" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-4.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>madlive</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-5.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>france</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-6.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>england</h3>
+            </div>
+          </div>
+
+          <div class="box-column">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-7.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>oxford</h3>
+            </div>
+
+            <div class="box box-half" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-8.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>london</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+              <div class="image"><img src="./images/gallery-img-9.png" alt="" /></div>
+              <span>travel spot</span>
+              <h3>dubai</h3>
+            </div>
+          </div>
+          -->
+        </div>
+      </section>
+      <!-- ................gallery end..................... -->
+
+      <!--...................review section start ................  -->
+
+      <section class="review" id="review">
+        <div class="box-container" data-aos="fade-right" data-aos-delay="300">
+          <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, molestiae?</p>
+            <div class="user">
+              <img src="./images/pic-1.png" alt="" />
+              <div class="info">
+                <h3>john doe</h3>
+                <span>designer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, molestiae?</p>
+            <div class="user">
+              <img src="./images/pic-2.png" alt="" />
+              <div class="info">
+                <h3>lilan asiaa</h3>
+                <span>data-enginer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, molestiae?</p>
+            <div class="user">
+              <img src="./images/pic-3.png" alt="" />
+              <div class="info">
+                <h3>kalia sari</h3>
+                <span>designer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, molestiae?</p>
+            <div class="user">
+              <img src="./images/pic-4.png" alt="" />
+              <div class="info">
+                <h3>molia nara</h3>
+                <span>designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content" data-aos="fade-right" data-aos-delay="600">
+          <span>Testimonials</span>
+          <h3>good new from out clients</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iure accusantium
+            odit quo incidunt reiciendis.
+          </p>
+        </div>
+      </section>
+      <!--...................review section end ................  -->
+
+      <!--...................banner img sect start ................  -->
+
+      <div class="banner">
+        <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+          <span>start your adventure</span>
+          <h3>Let's explore world with us</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate temporibus numquam
+            mollitia laboriosam, maiores similique!
+          </p>
+          <a href="#book-form" class="btn">book now</a>
+        </div>
+      </div>
+      <!--...................banner img sect end ................  -->
+
+      <!--...................blog section start ................  -->
+
+      <section class="blogs" id="blogs">
+        <div class="heading">
+          <span>blogs & posts</span>
+          <h1>Client exprience in worlds</h1>
+        </div>
+
+        <div class="box-container">
+          <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+              <img src="images/blog-1.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <a href="" class="link">One mile at a time</a>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, iusto!</p>
+              <div class="icon">
+                <a href=""><i class="fas fa-clock"></i>15 jan 2019</a>
+                <a href=""><i class="fas fa-user"></i>by myself</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <div class="image">
+              <img src="images/blog-2.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <a href="" class="link">Local adventure</a>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, iusto!</p>
+              <div class="icon">
+                <a href=""><i class="fas fa-clock"></i>4 aug 2020</a>
+                <a href=""><i class="fas fa-user"></i>by sarrifa</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <div class="image">
+              <img src="images/blog-3.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <a href="" class="link">First abroad</a>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, iusto!</p>
+              <div class="icon">
+                <a href=""><i class="fas fa-clock"></i>15 Oct 2022</a>
+                <a href=""><i class="fas fa-user"></i>by alii</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--...................blog section end ................  -->
+
+      <!--...................footer start ................  -->
+
+      <!--...................footer section start ................  -->
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <a href="" class="logo"><span>T</span>ravel<span>W</span>arrio</a>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.
+            </p>
+            <div class="share">
+              <a href="#" class="fab fa-facebook"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-linkedin"></a>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Quick link</h3>
+            <a href="#home" class="link"><i class="fas fa-arrow-right"></i>home</a>
+            <a href="#about" class="link"><i class="fas fa-arrow-right"></i>about</a>
+            <a href="#services" class="link"><i class="fas fa-arrow-right"></i>services</a>
+            <a href="#destination" class="link"><i class="fas fa-arrow-right"></i>destination</a>
+            <a href="#gallery" class="link"><i class="fas fa-arrow-right"></i>gallery</a>
+            <a href="#blogs" class="link"><i class="fas fa-arrow-right"></i>blogs</a>
+          </div>
+
+          <div class="box">
+            <h3>Contact info</h3>
+            <p><i class="fas fa-map"></i>Delhi india</p>
+            <p><i class="fas fa-phone"></i>+84 397 9 6868 88</p>
+            <p><i class="fas fa-envelope"></i>travelword@gmail.com</p>
+            <p><i class="fas fa-clock"></i>8:00am - 5:00pm</p>
+          </div>
+
+          <div class="box">
+            <h3>Newletters</h3>
+            <p>Subcribe for lated update</p>
+            <form action="">
+              <input type="email" name="" class="email" id="" placeholder="enter your email.." />
+              <input type="submit" class="btn" value="subcribe" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div class="credit">coded by <span>Van Quy</span> | all right reserved</div>
+      <!--...................footer end ................  -->
+    </div>
+
+    <!-- custom js file link  -->
+    <script src="./js/script.js" defer></script>
+    <script type="module" src="./js/utils/home.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        offset: 150,
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+#postForm {
+  margin-top: 1.5rem;
+}
+a {
+  color: unset;
+}
+#postForm > div {
+  margin-top: 2.5rem;
+}
+#postForm .form-group label {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+#postForm .form-group input {
+  height: 5rem;
+  font-size: 1.7rem;
+}
+/* #postForm .form-check {
+  margin-bottom: 1rem;
+} */
+#postForm .form-check input {
+  font-size: 2rem;
+}
+#postForm .form-check label {
+  line-height: 2.3;
+  font-size: 1.3rem;
+}
