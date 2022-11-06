@@ -27,12 +27,12 @@ export function createPostElement(post, idx) {
   // custom ảnh mình muốn đổi... nếu page =1 thì mình mới đổi
   // page là chuỗi ..nên == thì tự ép kiểu về so sánh..nên k cần huyển về int
   const customerImg = [
-    '../images/des-3.jpg',
-    '../images/des-4.jpg',
-    '../images/des-5.jpg',
-    '../images/des-6.jpg',
-    '../images/des-7.jpg',
-    '../images/des-8.jpg',
+    './images/des-3.jpg',
+    './images/des-4.jpg',
+    './images/des-5.jpg',
+    './images/des-6.jpg',
+    './images/des-7.jpg',
+    './images/des-8.jpg',
   ]
   const url = new URL(window.location)
 
