@@ -35,12 +35,12 @@ export function createPostElement(post, idx) {
   //   './assets/des-8.jpg',
   // ]
   const customerImg = [
-    './images/des-3.jpg',
-    './images/des-4.jpg',
-    './images/des-5.jpg',
-    './images/des-6.jpg',
-    './images/des-7.jpg',
-    './images/des-8.jpg',
+    'https://picsum.photos/id/25/367/267',
+    'https://picsum.photos/id/29/367/267',
+    'https://picsum.photos/id/27/367/267',
+    'https://picsum.photos/id/49/367/267',
+    'https://picsum.photos/id/54/367/267',
+    'https://picsum.photos/id/28/367/267',
   ]
   const url = new URL(window.location)
 

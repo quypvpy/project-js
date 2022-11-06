@@ -27,12 +27,12 @@ function renderPostDetail(post) {
 
     // mình tự custom image
     const customerImg = [
-      '../images/des-3.jpg',
-      '../images/des-4.jpg',
-      '../images/des-5.jpg',
-      '../images/des-6.jpg',
-      '../images/des-7.jpg',
-      '../images/des-8.jpg',
+      'https://picsum.photos/id/25/367/267',
+      'https://picsum.photos/id/29/367/267',
+      'https://picsum.photos/id/27/367/267',
+      'https://picsum.photos/id/49/367/267',
+      'https://picsum.photos/id/54/367/267',
+      'https://picsum.photos/id/28/367/267',
     ]
 
     const idx = parseInt(localStorage.getItem(post.id))
