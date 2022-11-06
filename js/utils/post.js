@@ -27,13 +27,21 @@ export function createPostElement(post, idx) {
   // custom ảnh mình muốn đổi... nếu page =1 thì mình mới đổi
   // page là chuỗi ..nên == thì tự ép kiểu về so sánh..nên k cần huyển về int
   const customerImg = [
-    './images/des-3.jpg',
-    './images/des-4.jpg',
-    './images/des-5.jpg',
-    './images/des-6.jpg',
-    './images/des-7.jpg',
-    './images/des-8.jpg',
+    './assets/des-3.jpg',
+    './assets/des-4.jpg',
+    './assets/des-5.jpg',
+    './assets/des-6.jpg',
+    './assets/des-7.jpg',
+    './assets/des-8.jpg',
   ]
+  // const customerImg = [
+  //   './images/des-3.jpg',
+  //   './images/des-4.jpg',
+  //   './images/des-5.jpg',
+  //   './images/des-6.jpg',
+  //   './images/des-7.jpg',
+  //   './images/des-8.jpg',
+  // ]
   const url = new URL(window.location)
 
   const thumbnailElement = liElement.querySelector('[data-id="thumbnail"]')
@@ -48,6 +56,9 @@ export function createPostElement(post, idx) {
     thumbnailElement.addEventListener('error', () => {
       thumbnailElement.src = 'https://via.placeholder.com/1368x400?text=Visit+Blogging.com+Now'
     })
+    console.log(thumbnailElement.src)
+    console.log(customerImg[idx])
+    console.log(thumbnailElement.src)
   }
 
   // attach event
