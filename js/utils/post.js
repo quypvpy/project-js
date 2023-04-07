@@ -56,8 +56,8 @@ export function createPostElement(post, idx) {
     thumbnailElement.addEventListener('error', () => {
       thumbnailElement.src = 'https://via.placeholder.com/1368x400?text=Visit+Blogging.com+Now'
     })
-    console.log(thumbnailElement.src)
-    console.log(customerImg[idx])
+    // console.log(thumbnailElement.src)
+    // console.log(customerImg[idx])
     // console.log(thumbnailElement.src)
   }
 
