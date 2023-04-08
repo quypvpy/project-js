@@ -320,7 +320,7 @@ section {
 }
 @media (max-width: 767px) {
   .header {
-    height: 400px;
+    height: 500px;
     background: url(../images/cv-background2.png) no-repeat center;
   }
 }
