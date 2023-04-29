@@ -26,7 +26,9 @@ export const toast = {
       position: 'left', // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
-        background: 'linear-gradient(to right, #CCFF66, #CCFF33)',
+        // background: 'linear-gradient(to right, #CCFF66, #CCFF33)',
+        background: '#394867',
+        color: 'white',
       },
     }).showToast()
   },

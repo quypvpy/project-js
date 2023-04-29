@@ -762,7 +762,7 @@ section {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   gap: 1.5rem;
   flex-wrap: wrap;
 }

@@ -277,7 +277,7 @@ export function initPostForm({ formId, defaultValues, onSubmit }) {
     showLoading(form)
     submitting = true
 
-    // get form value
+    // get form value sau khi submit ddeer lấy giá trị xem có hợp lẹ
     const formValues = getFormValues(form)
     formValues.id = defaultValues.id
     // add id để pk add edit.. vì edit thì defaultValues có id.

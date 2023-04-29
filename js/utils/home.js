@@ -2,6 +2,7 @@ import postApi from '../api/postApi'
 import { initPagination, renderPagination } from './pagination'
 import { renderPostList } from './post'
 import { initSeach } from './seach'
+import { toast } from './toast'
 
 async function handleFilterChange(filterName, filterValue) {
   try {
@@ -27,6 +28,25 @@ async function handleFilterChange(filterName, filterValue) {
   }
 }
 
+function registerPostDeleteEvent() {
+  document.addEventListener('post-delete', async (e) => {
+    // console.log('delte', e.detail)
+    try {
+      const post = e.detail
+      const measege = `Bạn có muốn chắc chắn xóa ${post.title} !!`
+      if (window.confirm(measege)) {
+        // if ok
+        await postApi.remove(post.id)
+        await handleFilterChange()
+        toast.success(`Xóa thành Công !!!`)
+      }
+    } catch (error) {
+      console.log('fail to remove post', error)
+      toast.error(`Error:${error.message}`)
+    }
+  })
+}
+
 ;(async () => {
   try {
     const url = new URL(window.location)
@@ -39,6 +59,8 @@ async function handleFilterChange(filterName, filterValue) {
     // const queryParams = new URLSearchParams(window.location.search)
     // const queryParams = url.searchParams.toString()
     const queryParams = url.searchParams
+
+    registerPostDeleteEvent()
     console.log(queryParams)
 
     initPagination({
@@ -58,6 +80,7 @@ async function handleFilterChange(filterName, filterValue) {
     // renderPostList(data)
     // renderPagination('pagination', pagination)
     handleFilterChange()
+    //k truyeenf j la refresh laij duwx lieuj
   } catch (error) {
     console.log('get all failed', error)
   }
