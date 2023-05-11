@@ -9,19 +9,33 @@
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <!-- boostrap cdn link -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- slick cdn link -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <!-- glightbox cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
   </head>
 
   <body>
@@ -53,19 +67,171 @@
     </template>
     <!-- ......template end -->
 
-    <div class="wrapper">
+    <div
+      class="wrapper"
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example bg-light p-3 rounded-2"
+      tabindex="0"
+    >
       <!-- header start -->
       <header class="header" id="home">
-        <!-- <img class="image-respontive" src="./images/cv-background2.png" alt="image" /> -->
-        <div class="container">       
-          <div class="header-icon">
-            <button class="btn" data-aos="zoom-in-left" data-aos-delay="1400">
-              <a href="/add-edit-post.html"> Add new</a>
-            </button>      
-          </div>        
-        </div>     
-   
+        <section>
+          <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+            <a class="navbar-brand" href="#">Blogs</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading6">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Popular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Destination</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading4">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading5">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/add-edit-post.html">Add News</a>
+              </li>
+            </ul>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#scrollspyHeading6"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading2">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading3">Destination</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading4">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading5">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/add-edit-post.html">Add News</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </section>
+
+        <div id="slide">
+          <div
+            class="item active"
+            style="background: url(../images/cv-background.png) no-repeat center/cover"
+          >
+            <div class="content">
+              <div class="name">Explore The World</div>
+              <div class="description">
+                Our team of experienced travel professionals will work with you to identify your
+                ideal destinations, arrange transportation and lodging, and provide advice on local
+                attractions and activities.
+              </div>
+              <button type="button" class="btn btn-primary btn-lg header-button">BOOK NOW</button>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background: url(../images/cv-background-01.png) no-repeat center/cover"
+          >
+            <div class="content">
+              <div class="name">Explore The World</div>
+              <div class="description">
+                Our team of experienced travel professionals will work with you to identify your
+                ideal destinations, arrange transportation and lodging, and provide advice on local
+                attractions and activities.
+              </div>
+              <button type="button" class="btn btn-primary btn-lg header-button">BOOK NOW</button>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background: url(../images/cv-background-02.png) no-repeat center/cover"
+          >
+            <div class="content">
+              <div class="name">Explore The World</div>
+              <div class="description">
+                Our team of experienced travel professionals will work with you to identify your
+                ideal destinations, arrange transportation and lodging, and provide advice on local
+                attractions and activities.
+              </div>
+              <button type="button" class="btn btn-primary btn-lg header-button">BOOK NOW</button>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background: url(../images/cv-background-03.png) no-repeat center/cover"
+          >
+            <div class="content">
+              <div class="name">Explore The World</div>
+              <div class="description">
+                Our team of experienced travel professionals will work with you to identify your
+                ideal destinations, arrange transportation and lodging, and provide advice on local
+                attractions and activities.
+              </div>
+              <button type="button" class="btn btn-primary btn-lg header-button">BOOK NOW</button>
+            </div>
+          </div>
+          <div
+            class="item"
+            style="background: url(../images/cv-background-04.png) no-repeat center/cover"
+          >
+            <div class="content">
+              <div class="name">Explore The World</div>
+              <div class="description">
+                Our team of experienced travel professionals will work with you to identify your
+                ideal destinations, arrange transportation and lodging, and provide advice on local
+                attractions and activities.
+              </div>
+              <button type="button" class="btn btn-primary btn-lg header-button">BOOK NOW</button>
+            </div>
+          </div>
+        </div>
+        <div class="button button-right"><img src="../images/test.png" alt="image" /></div>
       </header>
+
       <!-- header end -->
 
       <!-- booking section start -->
@@ -95,173 +261,127 @@
       </section>
       <!-- booking section end -->
 
-      <!-- about section start -->
-      <section class="about" id="about">
-        <div class="wrapper">
-          <div class="image" data-aos="fade-right" data-aos-delay="150">
-            <img src="./images/about-1.png" alt="image" />
-          </div>
-           <div class="text" data-aos="fade-left" data-aos-delay="250">
-            <div class="title">Hiking Tours</div>
-            <p>
-              There are various hiking trails in famous mountains around 
-              the world together with our travel service, you will be assisted by experienced guides.
-            </p>
-          </div>
-        
-        </div>
-        <div class="wrapper">
-          <div class="image" data-aos="fade-right" data-aos-delay="150">
-            <img src="./images/about-2.png" alt="image" />
-          </div>
-          <div class="text" data-aos="fade-left" data-aos-delay="400">
-            <div class="title">Kayaking Tours </div>
-            <p>
-              Kayaking can be a very thrilling activity, so we provide experienced guides
-               and kayaking access on famous rivers in various places.
-            </p>
-          </div>
-        
-        </div>
-        <div class="wrapper">
-          <div class="image" data-aos="fade-right" data-aos-delay="150">
-            <img src="./images/about-3.png" alt="image" />
-          </div>
-          <div class="text" data-aos="fade-left" data-aos-delay="550">
-            <div class="title">Cycling Tours </div>
-            <p>
-              With the latest models of bicycles and access to many famous bicycle routes around the world,
-               we are ready to satisfy your cycling activities.
-            </p>
-          </div>
-        
-        </div>
-        <div data-aos="fade-in" data-aos-delay="550">
-          <img src="./images/about-4.png" width="100%" alt="image" />
-        </div>
-        <div class="left" data-aos="fade-right" data-aos-delay="150">
-
-        <!-- <div class="left" data-aos="fade-right" data-aos-delay="150">
-          <div class="image">
-            <div class="circle"></div>
-            <img src="./images/BG (1).png" alt="" />
-            <div class="rectangle">
-              <span>999+</span>
-              <p>destination</p>
-            </div>
-          </div>
-        </div>
-        <div class="right" data-aos="fade-left" data-aos-delay="600">
-          <span>Whoe we are ?</span>
-          <h3>A smilling agent for you</h3>
-          <div class="text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam adipisci architecto
-              non commodi, minima deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Veniam adipisci architecto non commodi, minima deleniti.
-            </p>
-          </div>
-
-          <a href="#" class="btn">read more</a>
-        </div> -->
-      </section>
-      <!-- about section start -->
-
       <!-- ................services start..................... -->
 
-      <section class="services" id="services">
+      <section class="services" id="scrollspyHeading6">
         <div class="heading">
           <span>our services</span>
           <h1>cost effective</h1>
         </div>
 
         <div class="box-container">
-          <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="./images/service-1.png" width="100%" height="100%" alt="image" />
-              <!-- <i class="fas fa-globe"></i>
-              <h3>Worldwide</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p> -->
-              <div></div>
-            </div>
-            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-              <img src="./images/service-2.png" width="100%" height="100%" alt="image" />
-              <!-- <i class="fas fa-hiking"></i>
-              <h3>adventure</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p> -->
-              <div class=""></div>
-            </div>
-            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-              <img src="./images/service-3.png" width="100%" height="100%" alt="image" />
-              <!-- <i class="fas fa-utensils"></i>
-              <h3>food & drinks</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p> -->
-              <div class=""></div>
-            </div>
-            <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
-              <img src="./images/service-4.png" width="100%" height="100%" alt="image" />
-              <!-- <i class="fas fa-hotel"></i>
-              <h3>affordable hotels</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p> -->
-              <div class=""></div>
-            </div>
-            <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
-              <img src="./images/service-5.png" width="100%" height="100%" alt="image" />
-              <!-- <i class="fas fa-wallet"></i>
-              <h3>affordable price</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p> -->
-              <div class=""></div>
-            </div>
-            <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
-              <img src="./images/service-6.png" width="100%" height="100%" alt="image" />
-              <!-- <i class="fas fa-headset"></i>
-              <h3>24/7 support</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p> -->
-              <div class=""></div>
-            </div>
-          <!-- <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <i class="fas fa-globe"></i>
-            <h3>Worldwide</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
-            <div></div>
+          <div class="left">
+            <a href="./images/video-service.mp4" class="glightbox" data-gallery="gallery1">
+              <img src="./images/image-video.png" alt="image" />
+              <div class="icon-play"><i class="fa-solid fa-circle-play"></i></div>
+            </a>
           </div>
-          <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <i class="fas fa-hiking"></i>
-            <h3>adventure</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
-            <div class=""></div>
+          <div class="right">
+            <div class="item">
+              <i class="fa-solid fa-house-circle-check"></i>
+              <div class="title">Beautiful Condo</div>
+              <div class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <div class="title">Easy to Connect</div>
+              <div class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa-solid fa-utensils"></i>
+              <div class="title">Restaurants & Cafe</div>
+              <div class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa-solid fa-phone-volume"></i>
+              <div class="title">24/7 Support</div>
+              <div class="description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </div>
+            </div>
           </div>
-          <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <i class="fas fa-utensils"></i>
-            <h3>food & drinks</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
-            <div class=""></div>
+        </div>
+        <div class="number">
+          <div class="counter-container">
+            <div class="counter" data-val="7466">000</div>
+            <span class="text">No. of Travels</span>
           </div>
-          <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
-            <i class="fas fa-hotel"></i>
-            <h3>affordable hotels</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
-            <div class=""></div>
+          <div class="counter-container">
+            <div class="counter" data-val="368">000</div>
+            <span class="text">No. of Clients</span>
           </div>
-          <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
-            <i class="fas fa-wallet"></i>
-            <h3>affordable price</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
-            <div class=""></div>
+          <div class="counter-container">
+            <div class="counter" data-val="160">000</div>
+            <span class="text">No. of Employees</span>
           </div>
-          <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
-            <i class="fas fa-headset"></i>
-            <h3>24/7 support</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!</p>
-            <div class=""></div>
-          </div> -->
+          <div class="counter-container">
+            <div class="counter" data-val="80">000</div>
+            <span class="text">No. of Countries</span>
+          </div>
         </div>
       </section>
 
       <!-- ................services end..................... -->
 
+      <!-- ................popular start..................... -->
+
+      <section>
+        <div class="popular-destination" id="scrollspyHeading2">
+          <div class="heading">
+            <h1>Popular</h1>
+          </div>
+          <div class="popular">
+            <div class="item">
+              <a href="./images/popular-1.png" class="glightbox" data-gallery="gallery3">
+                >
+                <img src="./images/popular-1.png" alt="image" />
+              </a>
+            </div>
+            <div class="item">
+              <a href="./images/popular-6.png" class="glightbox" data-gallery="gallery3">
+                >
+                <img src="./images/popular-6.png" alt="image" />
+              </a>
+            </div>
+            <div class="item">
+              <a href="./images/popular-3.png" class="glightbox" data-gallery="gallery3">
+                >
+                <img src="./images/popular-3.png" alt="image" />
+              </a>
+            </div>
+            <div class="item">
+              <a href="./images/popular-4.png" class="glightbox" data-gallery="gallery3">
+                >
+                <img src="./images/popular-4.png" alt="image" />
+              </a>
+            </div>
+            <div class="item">
+              <a href="./images/popular-5.png" class="glightbox" data-gallery="gallery3">
+                >
+                <img src="./images/popular-5.png" alt="image" />
+              </a>
+            </div>
+            <div class="item">
+              <a href="./images/service-1.png" class="glightbox" data-gallery="gallery3">
+                >
+                <img src="./images/service-1.png" alt="image" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ................popular end..................... -->
+
       <!-- ................destination start..................... -->
 
-      <section class="destination" id="destination">
+      <section class="destination" id="scrollspyHeading3">
         <div class="heading">
           <span>out destination</span>
           <h1>keep looking up</h1>
@@ -301,7 +421,7 @@
 
       <!-- ................gallery start..................... -->
 
-      <section class="gallery" id="gallery">
+      <section class="gallery" id="scrollspyHeading4">
         <div class="heading">
           <span>our gallery</span>
           <h1>memories last forever</h1>
@@ -310,19 +430,46 @@
         <div class="box-container">
           <div class="box-column">
             <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-1.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-1.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="green land"
+                >
+                  <img src="./images/gallery-img-1.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>green land</h3>
             </div>
 
             <div class="box box-half" data-aos="zoom-in-up" data-aos-delay="300">
-              <div class="image"><img src="./images/gallery-img-2.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-2.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="ice land"
+                >
+                  <img src="./images/gallery-img-2.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>ice land</h3>
             </div>
 
             <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-              <div class="image"><img src="./images/gallery-img-3.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-3.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="thi land"
+                >
+                  <img src="./images/gallery-img-3.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>thi land</h3>
             </div>
@@ -330,19 +477,46 @@
 
           <div class="box-column">
             <div class="box box-half" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-4.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-4.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="madlive"
+                >
+                  <img src="./images/gallery-img-4.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>madlive</h3>
             </div>
 
             <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-5.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-5.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="france"
+                >
+                  <img src="./images/gallery-img-5.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>france</h3>
             </div>
 
             <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-6.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-6.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="england"
+                >
+                  <img src="./images/gallery-img-6.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>england</h3>
             </div>
@@ -350,24 +524,50 @@
 
           <div class="box-column">
             <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-7.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-7.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="oxford"
+                >
+                  <img src="./images/gallery-img-7.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>oxford</h3>
             </div>
 
             <div class="box box-half" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-8.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-8.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="london"
+                >
+                  <img src="./images/gallery-img-8.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>london</h3>
             </div>
 
             <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-              <div class="image"><img src="./images/gallery-img-9.png" alt="" /></div>
+              <div class="image">
+                <a
+                  href="./images/gallery-img-9.png"
+                  class="glightbox"
+                  data-gallery="gallery2"
+                  data-description="dubai"
+                >
+                  <img src="./images/gallery-img-9.png" alt="image" />
+                </a>
+              </div>
               <span>travel spot</span>
               <h3>dubai</h3>
             </div>
           </div>
-          -->
         </div>
       </section>
       <!-- ................gallery end..................... -->
@@ -449,7 +649,7 @@
 
       <!--...................blog section start ................  -->
 
-      <section class="blogs" id="blogs">
+      <section class="blogs" id="scrollspyHeading5">
         <div class="heading">
           <span>blogs & posts</span>
           <h1>Client exprience in worlds</h1>
@@ -504,8 +704,6 @@
       </section>
       <!--...................blog section end ................  -->
 
-      <!--...................footer start ................  -->
-
       <!--...................footer section start ................  -->
       <section class="footer">
         <div class="box-container">
@@ -551,19 +749,38 @@
         </div>
       </section>
 
+      <!--...................footer section end ................  -->
+
       <div class="credit">coded by <span>Van Quy</span> | all right reserved</div>
       <!--...................footer end ................  -->
     </div>
 
+    <div id="arrow-up">
+      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
     <!-- custom js file link  -->
-    <script src="./js/script.js" defer></script>
     <script type="module" src="./js/utils/home.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox()
+    </script>
+    <script src="./js/script.js" defer></script>
 
     <script>
       AOS.init({
