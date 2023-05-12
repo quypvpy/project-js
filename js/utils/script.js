@@ -1,5 +1,7 @@
 // // toggle menu
-console.log('vanquyxxxxxxxxxxx')
+window.onload = function () {
+  console.log('vanquyxxxxxxxxxxx')
+}
 // function menuToggle(selector, menu) {
 //   const toggleMenu = document.querySelector(selector)
 //   const ElevMenu = document.querySelector(menu)
